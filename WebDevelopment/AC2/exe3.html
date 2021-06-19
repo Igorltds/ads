@@ -1,0 +1,86 @@
+<!-- 
+    EXE3
+
+    Altere o css para fatorar o código HTML seguindo a imagem: 
+    https://drive.google.com/open?id=18rUa53AgZ0LhEH3BGHxbqytILiLX7qXy
+
+    Use apenas TAGS e PSEUDO-CLASSES nesse exercício.
+
+    As regras específicas são:
+     -- A tabela deve ter tamanho 100%, com a borda de largura 1px e preta (sem espaço entre as bordas!!!)  ok
+     -- Todas as células devem estar centralizadas e com a primeira letra maiúscula (quando possível)       ok
+     -- As duas primeiras linhas devem ter seus textos em negrito                                           ok
+     -- As linhas ímpares (1 e 3) devem possuir fundo cinza (grey)                                          ok
+     -- Todas as notas devem estar em itálico                                                               ok
+     -- As notas maiores ou igual a 7 deveme estar em verde (green)                                         ok
+     -- As notas menores que 7 devem estar em vermelho (red)                                                ok
+-->
+<style>
+    .tabela {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid black;
+        text-align: center;
+        text-transform: capitalize;
+    }
+    tr:nth-child(1), .tabela tr:nth-child(2){
+        font-weight: bolder;
+    }
+    tr:nth-child(2n+3){
+        background-color: grey;
+    }
+    tr:nth-child(4) :nth-child(3) {
+        color:red;
+    }
+    tr:nth-child(5) :nth-child(2) {
+        color:red;
+    }
+    tr:nth-child(5) :nth-child(3) {
+        color:red;
+    }
+    tr:nth-child(6) :nth-child(2) {
+        color:red;
+    }
+    tr:nth-child(3) :nth-child(2) {
+        color: green;
+    }
+    tr:nth-child(3) :nth-child(3) {
+        color: green;
+    }
+    tr:nth-child(4) :nth-child(2) {
+        color: green;
+    }
+    tr:nth-child(6) :nth-child(3) {
+        color: green;
+    }
+</style>
+<table border="1" class=tabela>
+    <tr>
+        <th rowspan="2">alunos</th>
+        <th colspan="2">notas</th>
+    </tr>
+    <tr>
+        <th>prova</th>
+        <th>trabalho</th>
+    </tr>
+    <tr>
+        <td>andré</td>
+        <td class="notas maior">10</td>
+        <td class="notas maior">8</td>
+    </tr>
+    <tr>
+        <td>joana</td>
+        <td class="notas maior">7</td>
+        <td class="notas menor">5</td>
+    </tr>
+    <tr>
+        <td>bruno</td>
+        <td class="notas menor">2</td>
+        <td class="notas menor">2</td>
+    </tr>
+    <tr>
+        <td>maria</td>
+        <td class="notas menor">5,5</td>
+        <td class="notas maior">10</td>
+    </tr>
+</table>

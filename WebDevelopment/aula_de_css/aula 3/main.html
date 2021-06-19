@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Entre em contato conosco!</h1>
+
+    <form action="http://www.pudin.com">
+        <!-- nome-->
+        <label for="nome_user">Nome: </label>
+        <input type="text" name="nome_user" id="email">
+        <!-- email-->
+        <label for="email_user">Email: </label>
+        <input type="email" name="email_user" id="email">
+        <!-- assunto-->
+        <label for="assunto">Assunto</label>
+        <select name="assunto" required>
+            <option value="">Selecione uma opção</option>
+            <option value="bug">Bug</option>
+            <option value="critica">Critica</option>
+            <option value="elogio">Elogio</option>
+            <option value="sugestão"></option>
+        </select>
+        <!--mensagem-->
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mesagem"></textarea>
+
+        <!--fildset-->
+        <fieldset>
+            <legend>Como você conheceu a Impacta? </legend>
+            <label for="gg">Google</label> <input id="gg" type="radio" name="fonte" value="google">
+            <label for="pc">Podcast</label> <input id="pc" type="radio" name="fonte" value="podcast">
+            <label for="tv">Tv</label> <input id="tv" type="radio" name="fonte" value="tv">
+        </fieldset>
+
+        <!--submit-->
+
+        <div class="button">
+            <input type="submit" value="enviar">
+            <input type="submit" value="limpar">
+        </div>
+    </form>
+</body>
+</html>

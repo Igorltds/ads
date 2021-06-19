@@ -1,0 +1,20 @@
+Esse html tem "buracos" para variaveis. A gente chama isso de template
+
+
+<ul>
+  {% for item in lista_compras %} <!-- comandos sao especificados dessa forma -->
+    <li>{{ item }}</li>    <!-- mostrar variaveis, dessa forma  -->
+    {% if item == "leite" %}
+        Não esqueça!
+    {% endif %}
+    {% if loop.last %}
+             <li>Aqui termina a lista</li>
+             <!-- loop.last é uma variavel que o jinja criou pra mim
+             se voce precisar tem varias coisas interessantes nesse objeto loop-->
+    {% endif %}
+   {% endfor %}
+</ul>
+
+
+<!-- sintaxe especifica de uma biblioteca de templates chamada jinja2,
+que o flask usa-->

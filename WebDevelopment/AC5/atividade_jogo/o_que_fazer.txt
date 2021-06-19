@@ -1,0 +1,9 @@
+Queremos construir um jogo de advinhação.
+
+1) vá para http://advinhas-deploy.herokuapp.com e teste o jogo
+2) Construa o objeto do jogo, seguindo as instruções em jogo.py
+   Teste seu jogo usando runtests_jogo
+
+3) Depois de passar todos os testes de runtests_jogo, você está pronto(a)
+   para construir o servidor. Faça isso seguindo as instruções de 
+   runtests_servidor_advinhar

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+       #footer {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 300px;
+        border: 3px solid #73AD21;
+        } 
+    </style>
+    <title>Minha Webpage</title>
+
+  </head>
+  <body>
+    Esse html base deve aparecer em várias páginas no meu server
+    
+
+    <div id="content">{% block conteudo %}{% endblock %}</div>
+    <div id="footer">
+      &copy; Copyright 2010 by <a href="http://domain.invalid/">you</a>.
+    </div>
+  </body>
+</html>
+
+{#
+  #python (chamou) template compras_v3 (extendeu) base.html
+  #renderizamos um html que é o base.html, preenchido com coisas do 
+  #compras_v3
+  
+  #Como foi feita essa "ligação" ?
+  
+  #O arquivo do conteudo principal avisou que ia extender
+  #o arquivo base, e separou um "block" pra preencher o base
+  
+  #compras_v3: {% extends "base.html" %} -- eu quero completar o base.html
+  #compras_v3 {% block content %} coisas {% endblock %}
+  
+  
+  # criei um bloco no compras_v3, e indiquei, no base.html, o que fazer com esse bloco
+  # base.html: <div id="content">{% block content %}{% endblock %}</div>
+  # no caso, colocar dentro de um div
+  #}

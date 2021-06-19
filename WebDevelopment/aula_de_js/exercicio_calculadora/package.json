@@ -1,0 +1,35 @@
+{
+  "name": "calculadora-javascript",
+  "version": "1.0.0",
+  "description": "Exercício de Calculadora Feito em JavaScript",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tecnologias-web/calculadora-javascript.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Yuri Dirickson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tecnologias-web/calculadora-javascript/issues"
+  },
+  "homepage": "https://github.com/tecnologias-web/calculadora-javascript#readme",
+  "devDependencies": {
+    "grunt": "^1.1.0",
+    "grunt-contrib-connect": "^2.1.0",
+    "grunt-contrib-jasmine": "^2.1.0"
+  },
+  "dependencies": {},
+  "scripts": {
+    "exe1": "node ./node_modules/grunt/bin/grunt jasmine --filter=Item1Spec",
+    "exe2": "node ./node_modules/grunt/bin/grunt jasmine --filter=Item2Spec",
+    "exe3": "node ./node_modules/grunt/bin/grunt jasmine --filter=Item3Spec",
+    "exe4": "node ./node_modules/grunt/bin/grunt jasmine --filter=Item4Spec",
+    "exe5": "node ./node_modules/grunt/bin/grunt jasmine --filter=Item5Spec"
+  }
+}

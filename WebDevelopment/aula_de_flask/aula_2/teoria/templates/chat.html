@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+
+  <body>
+    
+    {% for item in lista_mensagens %}
+    <p>
+        <span class= 'nome'> {{item[ 'nome']}}</span>
+        <span class='texto'> {{item['texto']}}</span>
+    </p>
+    {% endfor %}
+  
+  </body>
+</html>

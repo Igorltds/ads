@@ -1,0 +1,82 @@
+<!--
+    EXE2
+
+    Altere o css para fatorar o código HTML seguindo a imagem: 
+    https://drive.google.com/open?id=1FFPQq7nbKwnaPR1Y9_p8wiZOGd81lKk0
+
+    Use apenas seletores por classe. (Novamente, pode colocar classes nas tags html)
+    Para exercitarmos o conceito de classe, faremos o seguinte:
+    1) Cada seletor terá apenas uma regra associada
+    2) A mesma regra não deverá aparecer em dois seletores diferentes
+    (por exemplo, se você quiser usar font-size: 16px, faça isso em apenas um seletor)
+
+
+    As regras específicas são:
+     -- a borda da caixa deve ter grossura de 1px, cor negra e estilo sólido.                ok
+     -- O primeiro parágrafo deve ter tamanho 18px, negrito, cor preta e texto centralizado. ok
+     -- O segundo parágrafo deve ter tamanho 14px e cor azul.                                ok
+     -- O terceiro parágrafo deve ter tamanho 14px, negrito e cor verde.                     ok
+     -- O quarto parágrafo deve ter cor amarela, itálico e tamanho 16px.                     ok
+     -- O quinto parágrafo deve se sublinhado e ter cor vermelha e tamanho 18px.             ok
+     -- O último parágrafo deve ter cor roxa e tamanho 16px.                                 ok
+-->
+ <style> 
+    .info {
+        border: 1px solid black;
+    }
+    .tamanho28 {
+        font-size: 28px;  /* Foi exigido o numero 28 em aula, por isso o conflito com o enunciado */
+    }
+    .tamanho18 {
+        font-size: 18px;
+    }
+    .tamanho16 {
+        font-size: 16px;
+    }
+    .tamanho14 {
+        font-size: 14px;
+    }
+    .bold {
+        font-weight: 700;
+    }
+    .italico {
+        font-style: italic;
+    }
+    .sublinhado {
+        text-decoration: underline;
+    }
+    .preto {
+        color: black;
+    }
+    .azul {
+        color: blue;
+    }
+    .verde {
+        color: green;
+    }
+    .amarelo {
+        color: yellow
+    }
+    .vermelho {
+        color: red
+    }
+    .roxo {
+        color: purple
+    }
+    .center {
+        text-align: center;
+    }
+ </style>
+ <div class="info">
+    <p class="tamanho28 bold preto center">Sistemas de Órgãos Colegiados</p>
+    <p class="tamanho14 azul">Cursos de Graduação</p>
+    <p class="tamanho14 bold verde">Cursos de Pós-Graduação</p>
+    <p class="amarelo italico tamanho16">Mestrado</p>
+    <p class="sublinhado vermelho tamanho18">Doutorado</p>
+    <p><pre class="roxo tamanho16">
+        Esta é
+                a primeira
+        aula de
+                CSS.
+    </pre></p>
+</div>

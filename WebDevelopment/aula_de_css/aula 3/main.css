@@ -1,0 +1,18 @@
+body {
+    background-color: #eeee;
+}
+h1{
+    color: #0000ff;
+    text-align: center;
+}
+label, input {
+    display:block;
+}
+
+fildset label, fildset input{
+    display: inline;
+}
+.button{
+    text-align: center;
+}
+

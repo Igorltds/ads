@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>sorteio</title>
+    <style> 
+      .destaque{
+        background-color:red;
+        }
+
+    </style>
+  </head>
+
+  <body>
+    <ol>
+        {% for aluno in lista_alunos %}
+          {% if aluno != ganhador %}
+            <li> {{aluno}} </li>
+            
+            {% endif %}
+          {% if aluno == ganhador %}
+            <li class="destaque"> {{ganhador}} </li>
+            
+            {% endif %}
+        {% endfor %}
+ 
+          {% for aluno in lista_alunos %}
+            {% if aluno == ganhador %}
+              <p>"No dia {{data.day}} do mês {{data.month}}, o ganhador foi {{ganhador}}"</p>
+            
+            {% endif %}
+          {% endfor %}
+
+    </ol>
+  </body>
+</html>

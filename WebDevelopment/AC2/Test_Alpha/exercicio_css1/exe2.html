@@ -1,0 +1,86 @@
+<!--
+    EXE2
+
+    Altere o css para fatorar o código HTML seguindo a imagem: 
+    https://drive.google.com/open?id=1FFPQq7nbKwnaPR1Y9_p8wiZOGd81lKk0
+
+    Use apenas seletores por classe. (Novamente, pode colocar classes nas tags html)
+    Para exercitarmos o conceito de classe, faremos o seguinte:
+    1) Cada seletor terá apenas uma regra associada
+    2) A mesma regra não deverá aparecer em dois seletores diferentes
+    (por exemplo, se você quiser usar font-size: 16px, faça isso em apenas um seletor)
+
+
+    As regras específicas são:
+     -- a borda da caixa deve ter grossura de 1px, cor negra e estilo sólido.
+     -- O primeiro parágrafo deve ter tamanho 18px, negrito, cor preta e texto centralizado.
+     -- O segundo parágrafo deve ter tamanho 14px e cor azul.
+     -- O terceiro parágrafo deve ter tamanho 14px, negrito e cor verde.
+     -- O quarto parágrafo deve ter cor amarela, itálico e tamanho 16px.
+     -- O quinto parágrafo deve se sublinhado e ter cor vermelha e tamanho 18px.
+     -- O último parágrafo deve ter cor roxa e tamanho 16px.
+-->
+ <style>
+    /* general */
+     div {
+         border:1px black solid;
+     }
+
+     /* tex size*/
+     .t18 {
+         font-size: 18px;
+     }
+     .t16 {
+         font-size: 16px;;
+     }
+     .t14 {
+         font-size: 14px;
+     }
+
+     /* color */
+     .blue{
+         color: blue;
+     }
+     .green{
+         color: green;
+     }
+     .yellow {
+         color: yellow;
+     }
+     .red {
+         color: red;
+     }
+     .purple {
+         color: purple;
+     }
+
+     /* text types */
+     .center {
+         text-align: center;
+     }
+     .bolder{
+         font-weight: bolder;
+     }
+     .italic{
+         font-style: italic;
+     }
+     .underline{
+         text-decoration: underline;
+     }
+
+ </style>
+
+
+ <div class="info">
+    <p class="t18 bolder center">Sistemas de Órgãos Colegiados</p>
+    <p class="t14 blue">Cursos de Graduação</p>
+    <p class="t14 bolder green">Cursos de Pós-Graduação</p>
+    <p class="t16 italic yellow">Mestrado</p>
+    <p class="t18 underline red">Doutorado</p>
+    <p><pre class="t16 purple">
+        Esta é
+                a primeira
+        aula de
+                CSS.
+    </pre></p>
+</div>
