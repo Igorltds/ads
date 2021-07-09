@@ -1,12 +1,3 @@
-# StudySpace
-Área de Estudos e Testes
-
-Irei organizar aqui atividades da Faculdade (geralmente a partir do segundo semestre),
-Cursos e Estudos Autônomos. Desde atividades em progresso à releituras, complexibilizações
-e testes envolvendo as mesmas.
-
-
-
 # Organização.
 
 
