@@ -31,16 +31,7 @@ console.log(acharMaior([1,2,3,4]))
  */
 
 function lista_de_compras(lista) {
-  let texto = ""
-  for (var x in lista){
-    texto.push(x)
-    if (length(lista) === 1) ;
-      return texto
 
-    if (x === lista[-2]);
-      texto.push(" e ")
-  return texto
-  }
  }
 
 
