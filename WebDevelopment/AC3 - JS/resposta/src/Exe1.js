@@ -152,6 +152,7 @@ function cria_baralho() {
  */
 
 function desamassa_lista(lista) {
-
+  if (true){
+  }
 }
 
