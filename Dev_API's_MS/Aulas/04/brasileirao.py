@@ -260,7 +260,6 @@ def busca_imprecisa_por_nome_de_time(dados, valor_pesquisa):
     return lista_times_id
 
 
-
 '''
 Agora, a idéia é receber a id de um time
 e retornar as ids de todos os jogos em que ele participou
@@ -328,7 +327,6 @@ def dicionario_de_gols(dados):
         dic_gols[time['id']] = qtde_gols
     return dic_gols
 
-
     #tipos_gols1 = ["placar1", "penalti1", "desempate1"]
     #tipos_gols2 = ["placar2", "penalti2", "desempate2"]
     #gols = {}
@@ -383,8 +381,8 @@ ela chumbada da função
 
 def rebaixados(dados):
     faixa = (dados["fases"]["2700"]["faixas-classificacao"]
-                     ["classifica3"]["faixa"].split("-"))
-    faixa = (int(faixa[0]), int(faixa[1])) 
+             ["classifica3"]["faixa"].split("-"))
+    faixa = (int(faixa[0]), int(faixa[1]))
     lista = []
     for a in dados['fases']['2700']['classificacao']['grupo']['Único'][faixa[0]-1:faixa[1]]:
         lista.append(a)
@@ -410,11 +408,11 @@ def classificacao_do_time_por_id(dados, time_id):
     return 'nao encontrado'
 
 
-'''enfeite'''#enfeite
+'''enfeite'''  # enfeite
 ''''#'''''''#'''''''#'''''''#'''''''#'''''''#'''''''#'''
 #''''''##''''''##''''''##''''''##''''''##''''''##''''''#
 ''''#'''''''#'''''''#'''''''#'''''''#'''''''#'''''''#'''
-'''enfeite'''#enfeite
+'''enfeite'''  # enfeite
 
 try:
     #from brasileirao_gabarito import *
