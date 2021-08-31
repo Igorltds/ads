@@ -35,8 +35,7 @@ Ela retorna a id do time que foi campeao.
 
 
 def id_campeao(dados):
-    dados = dados['fases']['2700']['classificacao']['grupo']['Único'][0]
-    return dados
+    return dados['fases']['2700']['classificacao']['grupo']['Único'][0]
 
 
 '''
@@ -47,8 +46,7 @@ Ela retorna o nome-comum do time que foi campeao.
 
 
 def nome_campeao(dados):
-    variavel = id_campeao(dados)
-    return nome_do_time(dados, variavel)
+    return nome_do_time(dados, id_campeao(dados))
 
 
 '''
@@ -71,9 +69,8 @@ as strings "1" e "5" em números inteiros
 
 
 def qtos_libertadores(dados):
-    faixa = int(dados["fases"]["2700"]["faixas-classificacao"]
-                ["classifica1"]["faixa"].split("-")[1])
-    return faixa
+    return int(dados["fases"]["2700"]["faixas-classificacao"]
+                    ["classifica1"]["faixa"].split("-")[1])
 
 
 '''
@@ -85,13 +82,11 @@ O tamanho da lista que deve ser retornada é o argumento "numero_de_times"
 
 
 def ids_dos_melhor_classificados(dados, numero_de_times):
-    lista_times = []
+    lista = []
     for x in range(0, numero_de_times):
-        lista_times.append(dados['fases']['2700']
-                           ['classificacao']['grupo']['Único'][x])
-    # for x in dados['fases']['2700']['classificacao']['grupo']['Único']:
-    #    lista_times.append()
-    return lista_times
+        lista.append(dados['fases']['2700']
+                          ['classificacao']['grupo']['Único'][x])
+    return lista
 
 
 '''
@@ -107,8 +102,7 @@ A funcao so recebe o dicionario de dados do brasileirao
 
 
 def classificados_libertadores(dados):
-    numero_de_times = qtos_libertadores(dados)
-    return ids_dos_melhor_classificados(dados, numero_de_times)
+    return ids_dos_melhor_classificados(dados, qtos_libertadores(dados))
 
 
 '''
@@ -139,9 +133,8 @@ um unico return
 
 
 def ids_dos_times_de_um_jogo(dados, id_jogo):
-    time1 = dados['fases']['2700']['jogos']['id'][id_jogo]["time1"]
-    time2 = dados['fases']['2700']['jogos']['id'][id_jogo]["time2"]
-    return time1, time2
+    return (dados['fases']['2700']['jogos']['id'][id_jogo]["time1"],
+           dados['fases']['2700']['jogos']['id'][id_jogo]["time2"])
 
 
 '''
@@ -172,12 +165,10 @@ Se o nome comum nao existir, retorne ''
 
 
 def id_do_time(dados, nome_time):
-    # dados['equipes'][id_numerica]['nome-comum']
-    for a in dados['equipes']:
-        if dados['equipes'][a]['nome-comum'] == nome_time:
-            return dados['equipes'][a]['id']
-        else:
-            'Não encontrado'
+    for chave in dados['equipes']:
+        if nome_do_time(dados, chave) == nome_time:
+            return dados['equipes'][chave]['id']
+    return 'Não encontrado'
 
 
 '''
@@ -191,7 +182,6 @@ o número de vezes que um jogo ocorreu no estádio
 
 
 def dicionario_id_estadio_e_nro_jogos(dados):
-    # {"":num}
     dic_id_estadio = {}
     for jogo_id in dados["fases"]["2700"]["jogos"]["id"]:
         estadio_id = dados["fases"]["2700"]["jogos"]["id"][jogo_id]["estadio_id"]
@@ -248,15 +238,12 @@ que "batem" com a pesquisa (e pode ser vazia,  se não achar ninguém)
 def busca_imprecisa_por_nome_de_time(dados, valor_pesquisa):
     campos_de_pesquisa = ['nome-comum', 'nome-slug', 'sigla', 'nome']
     lista_times_id = []
-
     for id_equipe in dados["equipes"]:
         for campo in campos_de_pesquisa:
-            variavel = dados["equipes"][id_equipe][campo]
-            variavel = variavel.split(valor_pesquisa)
+            variavel = (dados["equipes"][id_equipe][campo]).split(valor_pesquisa)
             if len(variavel) > 1 or dados["equipes"][id_equipe][campo] == valor_pesquisa:
                 lista_times_id.append(dados["equipes"][id_equipe]['id'])
                 break
-
     return lista_times_id
 
 
@@ -269,7 +256,6 @@ e retornar as ids de todos os jogos em que ele participou
 
 def ids_de_jogos_de_um_time(dados, time_id):
     jogos = []
-
     for x in dados["fases"]["2700"]["jogos"]["id"]:
         if dados["fases"]["2700"]["jogos"]["id"][x]["time1"] == time_id:
             jogos.append(x)
@@ -289,20 +275,13 @@ Ela retorna uma lista das datas em que o time jogou
 
 
 def datas_de_jogos_de_um_time(dados, nome_time):
-    datas_dos_jogos = []
-    for id_jogo in dados["fases"]["2700"]["jogos"]["id"]:
-        time1 = dados["fases"]["2700"]["jogos"]["id"][id_jogo]["time1"]
-        time2 = dados["fases"]["2700"]["jogos"]["id"][id_jogo]["time2"]
-        times = [time1, time2]
-
-        for time in times:
-            if time == id_do_time(dados, nome_time):
-                datas_dos_jogos.append(
-                    dados["fases"]["2700"]["jogos"]["id"][id_jogo]["data"])
-                break
-
-    return datas_dos_jogos
-
+    datas = []
+    pega_id_time = id_do_time(dados, nome_time)
+    idjogo = ids_de_jogos_de_um_time(dados, pega_id_time)
+    for a in idjogo:
+        for data in dados['fases']['2700']['jogos']['id'][a]['data'].split('"'):
+            datas.append(data)
+    return datas
 
 '''
 A proxima funcao recebe apenas o dicionario dos dados do brasileirao
@@ -326,6 +305,7 @@ def dicionario_de_gols(dados):
                 qtde_gols = int(jogo['placar2']) + qtde_gols
         dic_gols[time['id']] = qtde_gols
     return dic_gols
+
 
     #tipos_gols1 = ["placar1", "penalti1", "desempate1"]
     #tipos_gols2 = ["placar2", "penalti2", "desempate2"]
