@@ -306,30 +306,6 @@ def dicionario_de_gols(dados):
         dic_gols[time['id']] = qtde_gols
     return dic_gols
 
-
-    #tipos_gols1 = ["placar1", "penalti1", "desempate1"]
-    #tipos_gols2 = ["placar2", "penalti2", "desempate2"]
-    #gols = {}
-    # for time_id in dados["equipes"]: # PASSANDO EM CADA UM DOS iD_TIME
-    #    jogos_time = ids_de_jogos_de_um_time(dados, time_id)
-    #    for id_jogo in jogos_time: #PASSANDO EM CADA UM DOS JOGOS DESSSE TIME
-    #        times_do_jogo = [dados["fases"]["2700"]["jogos"]["id"][id_jogo]["time1"]
-    #                        ,dados["fases"]["2700"]["jogos"]["id"][id_jogo]["time2"]]
-    #        for time_num in range(1,3): #VERIFICANDO QUAIS DADOS SÃO DO TIME DA VEZ
-    #            if time_num == time_id:
-    #                if time_num == 1:
-    #                    tipos_gols = tipos_gols1
-    #                if time_num == 1:
-    #                    tipos_gols = tipos_gols1
-    #                for tipo_gol in tipos_gols:
-    #                    if tipo_gol == "null":
-    #                        break
-    #                    print(tipo_gol, time_num)
-    #                    if time_id in gols:
-    #                        gols[time_id] += int(dados["fases"]["2700"]["jogos"]["id"][id_jogo][f"{tipo_gol}{time_num}"])
-    #                    else:
-    #                        gols[time_id] = int(dados["fases"]["2700"]["jogos"]["id"][id_jogo][f"{tipo_gol}{time_num}"])
-    # return gols
 '''
 A proxima funcao recebe apenas o dicionario dos dados do brasileirao
 Ela devolve a id do time que fez mais gols no campeonato
