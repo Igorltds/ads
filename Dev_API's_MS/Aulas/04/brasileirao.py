@@ -337,15 +337,13 @@ Ela devolve a id do time que fez mais gols no campeonato
 # 18
 
 
-def time_que_fez_mais_gols(dados):
-    dic_gols = dicionario_de_gols(dados)
-    gols = 0
-    for gols_time in dic_gols.values():
-        if gols_time > gols:
-            gols = gols_time
-    for time in dic_gols:
-        if gols == dic_gols[time]:
-            return time
+def classificacao_do_time_por_id(dados, time_id):
+    for a in dados['fases']['2700']['classificacao']['grupo']['Único']:
+        if a == time_id:
+            b = a.index(a)
+            b = int(b)
+            return b + 1
+        else: 'nao encontrado'
 
 
 '''
@@ -356,9 +354,9 @@ e retorna uma lista com as ids dos times rebaixados.
 Consulte a zona de rebaixamento do dicionário de dados, nao deixe
 ela chumbada da função
 '''
-# 19
+# 19 - otimizado
 
-
+ 
 def rebaixados(dados):
     faixa = (dados["fases"]["2700"]["faixas-classificacao"]
              ["classifica3"]["faixa"].split("-"))
