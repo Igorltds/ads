@@ -6,8 +6,7 @@ from pprint import pprint
 def pega_dados():
     with open('ano2018.json') as f:
         dados = json.load(f)
-    return dados
-
+    return dados    
 
 dados2018 = pega_dados()
 
