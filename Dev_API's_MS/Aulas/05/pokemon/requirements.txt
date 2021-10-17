@@ -1,3 +1,0 @@
-flask
-requests
-jsons==1.2.0
