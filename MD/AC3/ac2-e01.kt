@@ -1,8 +1,8 @@
-enum class Notas(val nota: String){
-    primeira("5"),
-    segunda("0"),
-    terceira("10"),
-    quarta("7")
+enum class Notas(val nota: Double){
+    primeira(5.0),
+    segunda(0.0),
+    terceira(10.0),
+    quarta(7.0)
 }
 
 fun main (args: Array<String>) {
