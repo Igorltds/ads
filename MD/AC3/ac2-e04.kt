@@ -1,6 +1,4 @@
-interface Usuario {
-    fun imprimir(){}
-}
+interface Usuario { fun imprimir(){} }
 
 
 class Leitura:Usuario{

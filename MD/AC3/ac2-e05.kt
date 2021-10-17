@@ -6,30 +6,30 @@ interface Usuario {
 
 class Leitura:Usuario{
     override fun imprimir () {
-    	println("Aplicando impreção 'Leitura'")
+    	println("Aplicando impreção 'Leitura'.")
     }
     override fun estudo () {
-    	println("Aplicando função 'estudos' dentro de 'Leitura'")
+    	println("Aplicando função 'estudos' dentro de 'Leitura'.")
     }
 }
 
 
 class Aluno:Usuario{
     override fun imprimir () {
-        println("Aplicando impreção 'Aluno'")
+        println("Aplicando impreção 'Aluno'.")
     }
     override fun estudo () {
-    	println("Aplicando função 'estudos' dentro de 'Aluno'")
+    	println("Aplicando função 'estudos' dentro de 'Aluno'.")
     }
 }
 
 
 class Professor:Usuario{
     override fun imprimir () {
-        println("Aplicando impreção 'Professor'")
+        println("Aplicando impreção 'Professor'.")
     }
     override fun estudo () {
-    	println("Aplicando função 'estudos' dentro de 'Professor'")
+    	println("Aplicando função 'estudos' dentro de 'Professor'.")
     }
 }
 
