@@ -30,8 +30,10 @@ open class Carro5{
     fun escreveAno(){
         println(this.ano)
     }
-    fun setValor(valor_novo: Double) {this.valor = valor_novo}
+    // atividade: get e set de valor.
+    fun setValor(valor_novo: Double) {this.valor = valor_novo} 
     fun getValor() {println(this.valor)}
+
     // permite que o método tipoTracao possa ser sobre escrito.
     open fun tipoTracao(): String{
         return "4X2"
@@ -62,7 +64,7 @@ fun main(){
     println(j.anguloDeEntrada)
     
     
-    //------ exercício
+    //------ Atividade
     println("\n\n------ exercício")
     c.getValor() // ------------- getValor
     c.setValor(5.5) // ------------- setValor
