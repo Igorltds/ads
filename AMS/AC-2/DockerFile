@@ -1,0 +1,4 @@
+From python:3
+Copy . /app
+run pip install 
+CMD python flask-books.py
