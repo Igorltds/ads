@@ -39,7 +39,18 @@ def test_converteXXVII():
     assert converte('XXVII')== 27  
 def test_converteIX():
     assert converte('IX')== 9
+    
 #def test_converteXXVX():
 #    assert converte('XXVX')== False
                                     
 
+
+#input type error
+def test_converteINT():
+    assert converte(10) == "input type error"
+def test_converteFLOAT():
+    assert converte(7.7) == "input type error"
+
+#input str invalid
+def test_converteSTRint():
+    assert converte("10") == "input str invalid" 
